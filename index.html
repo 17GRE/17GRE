@@ -176,7 +176,7 @@ body {
 		var	reverse=$("#reverse").prop("checked");
 
 		$("h1").text($("#plan").val())
-		for (var i = 0,l=totalList/listPerDay+25+weekday; i<l; i++) {
+		for (var i = 0,l=totalList/listPerDay+29+weekday; i<l; i++) {
 			currentDay=new Date(firstLineSunday-0+i*86400000);
 			calendar.append("<div>"+(currentDay.getMonth()-0+1)+"/"+currentDay.getDate()+"</div>")
 		};
@@ -222,7 +222,7 @@ body {
 			calendar.children().eq(weekday+i+3).append("<br>*"+book+" "+plan[reverse?l-i-1:i])
 			calendar.children().eq(weekday+i+7).append("<br>*"+book+" "+plan[reverse?l-i-1:i])
 			calendar.children().eq(weekday+i+14).append("<br>*"+book+" "+plan[reverse?l-i-1:i])
-			calendar.children().eq(weekday+i+25).append("<br>*"+book+" "+plan[reverse?l-i-1:i])
+			calendar.children().eq(weekday+i+29).append("<br>*"+book+" "+plan[reverse?l-i-1:i])
 			
 		};
 		return false;
